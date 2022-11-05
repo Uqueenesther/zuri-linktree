@@ -4,16 +4,21 @@ import '../App.scss'
 
   function Contact () {
     const [inputs, setInputs] = useState({});
-
+    const [textarea, setTextarea] = useState()
     const handleChange = (event) => {
       const name = event.target.name;
       const value = event.target.value;
       setInputs(values => ({...values, [name]: value}))
     }
-  
+   
+    const handleChangeText = (event) => {
+      setTextarea(event.target.value)
+    }
+
     const handleSubmit = (event) => {
       event.preventDefault();
       alert("submitted");
+      console.log(handleSubmit, "here");
     }
 
     return(
@@ -25,14 +30,14 @@ import '../App.scss'
                     <p className='ptag'>Hi there, Contact me to ask me anything you have in mind</p>
                   </div>
                   <div className='form'>
-                      <form className='form__container' onSubmit={handleSubmit}>
+                      <form className='form__container' >
                         <div className='form__group form__name'>
                             
                             <div className='form__firstname'>
                             <label className='form__label' htmlFor="firstname">First name</label>
                             <input type='text' 
                             name='firstname'
-                            value={inputs.username}
+                            value={inputs.firstname}
                             onChange={handleChange}
                              className='form__input' 
                              placeholder='Enter your first name' 
@@ -41,19 +46,29 @@ import '../App.scss'
 
                             <div className='form__lastname'>
                             <label className='form__label' htmlFor="Lastname">Last name</label>
-                            <input type='text' className='form__input' placeholder='enter your last name' id='lastname ' required />
+                            <input type='text' className='form__input' placeholder='enter your last name' id='lastname ' required 
+                            name='lastname'
+                            value={inputs.lastname}
+                            onChange={handleChange}
+                            />
                             </div>
                         </div>
 
                         <div className='form__group'>
                        
                         <label className='form__label' htmlFor="email">Email</label>
-                        <input type='email' className='form__input form__email' placeholder='Your name at gmail.com' id='email' required/>
+                        <input type='email' className='form__input form__email' placeholder='Your name at gmail.com' id='email' required
+                        name='email'
+                        value={inputs.email}
+                        onChange={handleChange}
+                        />
                         </div>
 
                         <div className='form__group'>
                         <label className='form__label' htmlFor="message">Message</label>
-                        <textarea className='form__textarea' placeholder='Send a message and I will reply ypu as soon as possible' required/> 
+                        <textarea className='form__textarea' placeholder='Send a message and I will reply ypu as soon as possible' required
+                        value={textarea} onChange={handleChangeText}
+                        /> 
                         </div>
 
                         <div className='form__checkbox'>
@@ -61,7 +76,7 @@ import '../App.scss'
                         <p> You agree to providing your data to name who may contact you</p>
                         </div>
 
-                        <button type='submit' className='btn' id='btn__submit'>Send Message</button>
+                        <button type='submit' className='btn' id='btn__submit' onSubmit={handleSubmit}>Send Message</button>
                       </form>
                   </div>
 
