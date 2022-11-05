@@ -1,21 +1,20 @@
 import React from 'react';
-// import  { useState } from "react";
+import  { useState } from "react";
 import '../App.scss'
 
   function Contact () {
-    // const [formStatus, setFormStatus] = useState('Send Message')
-    // const onSubmit = (e) => {
-    //   e.preventDefault()
-    //   setFormStatus("")
-    //   const { firstname, lastname, email, message } = e.target.elements
-    //   let conFom = {
-    //     firstname: firstname.value,
-    //     lastname: lastname.value,
-    //     email: email.value,
-    //     message: message.value,
-    //   }
-    //   console.log(conFom, "here")
-    // }
+    const [inputs, setInputs] = useState({});
+
+    const handleChange = (event) => {
+      const name = event.target.name;
+      const value = event.target.value;
+      setInputs(values => ({...values, [name]: value}))
+    }
+  
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      alert("submitted");
+    }
 
     return(
       <div>
@@ -26,25 +25,34 @@ import '../App.scss'
                     <p className='ptag'>Hi there, Contact me to ask me anything you have in mind</p>
                   </div>
                   <div className='form'>
-                      <form className='form__container' >
+                      <form className='form__container' onSubmit={handleSubmit}>
                         <div className='form__group form__name'>
+                            
                             <div className='form__firstname'>
-                            <label className='form__label' for="firstname">First name</label>
-                            <input type='text' className='form__input' placeholder='Enter your first name' id='firstname' required/>     
+                            <label className='form__label' htmlFor="firstname">First name</label>
+                            <input type='text' 
+                            name='firstname'
+                            value={inputs.username}
+                            onChange={handleChange}
+                             className='form__input' 
+                             placeholder='Enter your first name' 
+                             id='firstname' required/>     
                             </div>
+
                             <div className='form__lastname'>
-                            <label className='form__label' for="Lastname">Last name</label>
+                            <label className='form__label' htmlFor="Lastname">Last name</label>
                             <input type='text' className='form__input' placeholder='enter your last name' id='lastname ' required />
                             </div>
                         </div>
 
                         <div className='form__group'>
-                        <label className='form__label' for="email">Email</label>
+                       
+                        <label className='form__label' htmlFor="email">Email</label>
                         <input type='email' className='form__input form__email' placeholder='Your name at gmail.com' id='email' required/>
                         </div>
 
                         <div className='form__group'>
-                        <label className='form__label' for="message">Message</label>
+                        <label className='form__label' htmlFor="message">Message</label>
                         <textarea className='form__textarea' placeholder='Send a message and I will reply ypu as soon as possible' required/> 
                         </div>
 
