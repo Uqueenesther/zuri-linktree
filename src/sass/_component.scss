@@ -1,17 +1,5 @@
-
-html{
-    box-sizing: border-box;
-    font-size: 62.5%;
-  }
-  .container{
-    // background-color:  rgb(214, 182, 182);
-    font-family:sans-serif;
-    font-weight: 400;
-    font-size: 3rem;
-    line-height: 3.3rem; 
-  }
-  
-  .main{
+ 
+.container{
     display: flex;
       flex-direction: column;
       align-items: center;
@@ -20,12 +8,9 @@ html{
        margin-top:4rem;
        margin-left: 11.2rem;
        margin-right: 11.2rem;
+      
   }
   
-  // .content{
-  //  margin: 0px 14.4rem ;
-  
-  // }
   .nav{
     float: right;
   }
@@ -64,7 +49,7 @@ html{
        background-color: #EAECF0;
         color: rgb(61, 61, 61);
         text-decoration: none;
-        font-family: sans-serif;
+        font-family: Lato;
         font-size: 3rem;
         font-weight: 200;
         padding: 3rem 1rem;
@@ -89,7 +74,9 @@ html{
   }
   
   .social{
-      margin: 5rem;
+      display: flex;
+     justify-content: center;
+      align-items: center;
      
   }
   .icons{
@@ -105,30 +92,149 @@ html{
   
   
   .footer{
-    
-    margin: 7rem;
-  
-    &__content{
+    font-size: 2.2rem;
+     margin: 12rem 17rem 7rem;
+    &__list{
       display: flex;
-      justify-content:space-around;
-      align-content: center;
-      
+      list-style: none;
+      align-items: center;
+      justify-content: space-between;
     }
-    
+
+    &__item{
+
+    }
     &__link{
       
-      &:link,
-      &:visited{
-        text-decoration: none;
-        color: black;
-        font: inherit;
-      }
+    &:link,
+    &:visited{
+      text-decoration: none;
+      color: black;
+      font: inherit;
     }
   }
+  }
   
+
+// ///////////////////////////////////// CONTACT
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-style: Lato;
+}
+
+.ptag{
+  font-size: 3rem;
+}
+.contact__header{
+  font-size: 2rem;
+}
+
+.form{
+ 
+   &__container{
+    font-size: 2.5rem;  
+    
+   }
+  &__group{
+    margin-top: 4rem;
+    display: block;
+  }
+
+  &__label{
+    display: block;
+    font-style: Lato;
+  }
+
+  &__name{
+    display: flex;
+    gap: 6rem;
+  }
+ 
+
+  &__input{
+     width: 95%;
+     height: 8rem;
+     border: 1px solid #D0D5DD;
+     margin-top: 2rem;
+     border-radius: 1rem;
+     font-size: inherit;
+    
+     &:focus{
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(black, .1);
+      border-bottom: 3px solid  #4d13d1;
+      
+   }   
+
+   &:focus:invalid {
+       border: 3px solid rgb(236, 88, 88);
+   }
+  }
+
+  &__textarea{
+    height: 15rem;
+    width: 95%;
+    border:1px solid #D0D5DD; 
+    border-radius: 1rem;
+    padding-top: 2rem;
+    font: 3rem;
+
+    &:focus{
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(black, .1);
+      border-bottom: 3px solid  #4d13d1;
+      
+   }   
+
+   &:focus:invalid {
+       border: 3px solid rgb(236, 88, 88);
+   }
+  }
+
+  ::placeholder {
+    font-size: 2.4rem;
+    text-transform: lowercase;
+    padding-left: 1.5rem;
+    font-family: Lato;
+  }
+
+ &__checkbox{
+  display: flex;
+  
+ } 
+}
+.input__checkbox{
+  margin-right: 2rem;
+  width: 2rem;
+}
+
+.btn {
+    display: inline-block;
+    width: 95%;
+    height: 6rem;
+    font-weight: 400;
+    color: #f0f4f8;
+    text-align: center;
+    cursor: pointer;
+    background-color: #4d13d1;
+    border: none;
+    font-family: Lato;
+    font-size: inherit;
+    border-radius: 0.5rem;
+    
+  }
+
+
+
+
+
   // MEDIA SCREEN
   
-  $bp-large: 1000px; 
+  $bp-large: 1100px; 
   
   @media only screen and (max-width:$bp-large){
   
@@ -136,13 +242,16 @@ html{
       font-size: 50%;
     }
     .footer{
-    
-  
-      &__content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-         gap: 4rem;
+      margin: 8rem;
+     &__list{
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        //  gap: 4rem;
+
+        display: grid;
+        justify-content: start;
+        gap: 4rem;
       }
     }
   }

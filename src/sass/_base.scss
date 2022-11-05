@@ -1,0 +1,25 @@
+$color-primary:#ffff;
+$color-primary-2:rgb(61, 61, 61);
+$color-secondary:#4d13d1;
+$border:#0000;
+$font-primary: Lato, "sans-serif";
+$font-secondary: "sans-serif";
+
+
+*,
+ *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    background-color: $color-primary;
+  }
+  .container{
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 3.3rem; 
+  }
