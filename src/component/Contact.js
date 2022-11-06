@@ -15,11 +15,11 @@ function  Contact (){
                 <div className='form__group form__name'>
                     <div className='form__firstname'>
                     <label className='form__label'>first name</label>
-                    <input type='text' className='form__input' placeholder='Enter your first name' id='firstname' required/>     
+                    <input type='text' className='form__input' placeholder='Enter your first name' id='firs_name' required/>     
                     </div>
                     <div className='form__lastname'>
                     <label className='form__label'>Last name</label>
-                    <input type='text' className='form__input' placeholder='enter your last name' id='lastname' required/>
+                    <input type='text' className='form__input' placeholder='enter your last name' id='last_name' required/>
                     </div>
                 </div>
 

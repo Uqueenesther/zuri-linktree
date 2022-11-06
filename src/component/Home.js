@@ -30,7 +30,7 @@ function Home() {
               <a href='https://books.zuri.team/python-for-beginners?ref_id=Queenesther' target="_blank" rel="noreferrer" className='buttons__link' id="book__python"> Python Books</a>
               <a href='https://background.zuri.team/' target="_blank" rel="noreferrer" className='buttons__link' id="pitch"> Background check for coders</a>
               <a href='https://background.zuri.team/design-rules' target="_blank" rel="noreferrer" className='buttons__link' id="book__design"> Design Books</a>
-              <Link to="/Contact"  className='buttons__link' id=" "> Contact Me</Link>
+              <Link to="/Contact"  className='buttons__link' id="contact"> Contact Me</Link>
             </div>
        </div> 
 
