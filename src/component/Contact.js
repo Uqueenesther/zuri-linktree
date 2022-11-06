@@ -35,7 +35,7 @@ function  Contact (){
 
                 <div className='form__checkbox'>
                 <input type='checkbox' className='input__checkbox' />
-                <p> You agree to providing your data to name who may contact you</p>
+                <p> You agree to providing your data to WHALLA YO who may contact you</p>
                 </div>
 
                  <button type='submit' className='btn' id='btn__submit'>Send me</button>
