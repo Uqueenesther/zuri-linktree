@@ -30,7 +30,7 @@ function  Contact (){
 
                 <div className='form__group'>
                 <label className='form__label'>Message</label>
-                 <textarea className='form__textarea' placeholder='Send a message and I will reply ypu as soon as possible' required/> 
+                 <textarea className='form__textarea' placeholder='Send a message and I will reply ypu as soon as possible' id='message' required/> 
                 </div>
 
                 <div className='form__checkbox'>
