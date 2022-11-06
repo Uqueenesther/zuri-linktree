@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom'
 
 function Home() {
   return (
-   <div>
-     <div className='container'>
+    <div className='container'>
+      <div className='main'>
         <div className='content'>
             <div className='profile__section'>
               <div className='nav'>
@@ -40,15 +40,18 @@ function Home() {
                   <img src='img/icon.png' alt='gitlogo' className='git'/>       
             </div>     
           </div> 
+          
+      </div>
+       <footer className='homefooter'>
+          <div className='footercontainer'>
+            <ul className='footerlist'>
+            <li className='footeritem'><a href='http://localhost:3000/' className='footerlink'><img src='img/I4G.png' className='footerimg' alt=''/></a></li>
+            <li className='text'> <a href='http://localhost:3000/' className='footerlink '>HNG internship 9 Frontend Task</a></li>
+            <li className='footeritem'> <a href='http://localhost:3000/' className='footerlink'> <img src='img/zuri-logo.png 'alt='' className='footerimg'/></a></li>
+          </ul>
+          </div>
+       </footer>
     </div>
-           <div className='footer'>
-              <ul className='footer__list'>
-                <li className='footer__item'> <a href='http://localhost:3000/' className='footer__link'><img src='img/I4G.png' className='footer__img' alt=''/></a></li> 
-                <li  className='footer__item'><a href='http://localhost:3000/' className='footer__link footer__img'>HNG internship 9 Frontend Task</a></li>
-                <li   className='footer__item'><a href='http://localhost:3000/' className='footer__link'> <img src='img/zuri-logo.png 'alt='' className='footer__img'/></a></li>
-              </ul>
-            </div>
-   </div>
   );
 }
 

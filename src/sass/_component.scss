@@ -1,16 +1,11 @@
- 
-.container{
-    display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      
-       margin-top:4rem;
-       margin-left: 11.2rem;
-       margin-right: 11.2rem;
-      
-  }
+
+  .main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
+  }
   .nav{
     float: right;
   }
@@ -91,39 +86,79 @@
   }
   
   
-  .footer{
-    font-size: 2.2rem;
-     margin: 12rem 17rem 7rem;
-    &__list{
-      display: flex;
-      list-style: none;
-      align-items: center;
-      justify-content: space-between;
-    }
+ .footer{
+ 
+  &__list{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:nowrap;
+    margin-bottom: 4rem;
+    width: 100vw;
+  }
 
-    &__item{
-
-    }
-    &__link{
-      
+  &__link{
+    
     &:link,
     &:visited{
       text-decoration: none;
       color: black;
       font: inherit;
     }
-  }
-  }
+ } 
+
+ } 
+
+ .text{
+  font-family: Lato;
+  font-size: 3rem;
+ }
+ 
+ .home{
+  margin-top: 10rem;
   
+ }
+
+//  ////////////////home footer
+.homefooter{
+  margin-top: 5rem;
+}
+.footercontainer{
+ 
+  
+}
+
+.footerlist{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  width: 90vw;
+  
+}
+
+.footerlink{
+  
+    
+    &:link,
+    &:visited{
+      text-decoration: none;
+      color: black;
+      font: inherit;
+    }
+}
+
+ 
+ 
 
 // ///////////////////////////////////// CONTACT
 .container{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: grid;
   align-items: center;
   justify-content: center;
-  font-style: Lato;
+  // margin-top: 4rem;
+  // margin-left: 11.2rem;
+  // margin-right: 11.2rem;
 }
 
 .ptag{
@@ -134,10 +169,15 @@
 }
 
 .form{
+  
  
    &__container{
     font-size: 2.5rem;  
-    
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+  
    }
   &__group{
     margin-top: 4rem;
@@ -228,32 +268,77 @@
     
   }
 
+  .contact{
+    margin-top: 10rem;
+  }
+
+
   // MEDIA SCREEN
   
   $bp-large: 1100px; 
+  $bp-meduim:600px;
   
   @media only screen and (max-width:$bp-large){
   
     html{
       font-size: 50%;
     }
+
+   
     .form{
       &__name{
         display: grid;
       }
+
+      ::placeholder {
+           font-size: 1.8rem;
+           text-transform: lowercase;
+           padding-left: .5rem;
+           font-family: Lato;
+         }
+
+    
     }
     
     .footer{
-      margin: 8rem;
+      // margin: 8rem;
      &__list{
         display: grid;
-        justify-content: start;
+       justify-content: center;
+       align-content: center;
         gap: 4rem;
+        padding: 0px;
       }
+      
     }
+
+    .homefooter{
+      margin-top: 5rem;
+    }
+    .footercontainer{
+     
+      
+    }
+    
+    .footerlist{
+      display: grid;
+      align-content: center;
+      justify-content: start;
+      list-style: none;
+      gap: 3rem;
+      width: 45vw;
+      
+    }
+    
+    
   }
   
-  
+  @media only screen and (max-width:$bp-meduim){
+    html{
+      font-size: 40%;
+    }
+
+  }
   
   
   
